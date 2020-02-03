@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: k8s-multi-com-tls
+spec:
+  secretName: k8s-multi-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: metegol-app.com
+  dnsNames:
+    - metegol-app.com
+    - www.metegol-app.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - metegol-app.com
+          - www.metegol-app.com
