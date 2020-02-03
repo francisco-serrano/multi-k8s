@@ -15,7 +15,7 @@ spec:
       volumes:
         - name: postgres-storage
           persistentVolumeClaim:
-            claimName: database-persistent-volume-claim
+            claimName: database-persistent-volume-claim-2
       containers:
         - name: postgres
           image: postgres
@@ -24,7 +24,6 @@ spec:
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql/data
-              subPath: postgres
           env:
             - name: PGPASSWORD
               valueFrom:
