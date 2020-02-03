@@ -11,7 +11,7 @@ spec:
   tls:
     - hosts:
         - metegol-app.com
-        - www.metegol-app.co
+        - www.metegol-app.com
       secretName: k8s-multi-com
   rules:
     - host: metegol-app.com
