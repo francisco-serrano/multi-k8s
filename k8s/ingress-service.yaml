@@ -12,7 +12,7 @@ spec:
     - hosts:
         - metegol-app.com
         - www.metegol-app.com
-      secretName: k8s-multi-com
+      secretName: metegol-app
   rules:
     - host: metegol-app.com
       http:
